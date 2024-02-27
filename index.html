@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">  
+  <link rel="stylesheet" href="./src/output.css">
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" href="./toppng.com-9kib-354x415-unnamed-mongodb-logo-sv-316x374.png">
+  <title>MongoDB</title>
+  <script>
+      if ("serviceWorker" in navigator) {
+        navigator.serviceWorker
+          .register("/sw.js")
+          .then(function (registration) {
+            console.log(
+              "Service worker terdaftar dengan skop: ",
+              registration.scope
+            );
+          })
+          .catch(function (error) {
+            console.log("Service worker gagal terdaftar: ", error);
+          });
+      } else {
+        console.log("Browser tidak mendukung service worker");
+      }
+  </script>
+</head>
+<body class="bg-green-500 h-screen flex justify-center items-center">
+  <a href="https://cloud.mongodb.com" class="border-2 border-white font-bold text-white rounded p-2 text-xl">Click Here</a>
+</body>
+</html>
